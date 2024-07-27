@@ -14,7 +14,7 @@ document.getElementById("getRecipeBtn").addEventListener("click",fetchData);
 
 
 function fetchData(){
-document.getElementsById("recipe-title").innerHTML=randomRecipe.title;
+document.getElementById("recipe-title").innerHTML=randomRecipe.title;
 document.getElementById("recipe-image").src=randomRecipe.image;
 document.getElementById("recipe-instruction").innerHTML=randomRecipe.instructions;
 }
