@@ -51,7 +51,7 @@ button:hover {
 }
 
 .recipe-image {
-  max-width: 100%;
+  max-width: 30%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
