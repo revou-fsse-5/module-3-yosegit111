@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Recipe Finder</title>
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 id="title">Random Recipe Finder</h1>
-      <button id="getRecipeBtn">Get Random Recipe</button>
-      <div id="recipeContainer" class="recipe-container">
-        <img id="recipe-image" src="" alt="" />
-        <h2 id="recipe-title"></h2>
-        <p id="recipe-instruction"></p>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Recipe Finder</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Random Recipe Finder</h1>
+    <button id="getRecipeBtn">Get Random Recipe</button>
+    <div id="recipeContainer" class="recipe-container">
+      <img id="recipe-image" src="" alt="" class="recipe-image" />
+      <h2 id="recipe-title" class="recipe-title"></h2>
+      <p id="recipe-instruction" class="recipe-instructions"></p>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="main.ts"></script>
+</body>
 </html>
