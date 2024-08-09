@@ -18,7 +18,7 @@ async function getRandomRecipe(): Promise<void> {
     const recipeContainer: HTMLElement | null = document.getElementById('recipeContainer');
     const recipeImage: HTMLImageElement | null = document.getElementById('recipe-image') as HTMLImageElement;
     const recipeTitle: HTMLElement | null = document.getElementById('recipe-title');
-    const recipeInstructions: HTMLElement | null = document.getElementById('recipe-instruction');
+    const recipeSteps: HTMLElement | null = document.getElementById('recipe-steps');
   
     if (recipeImage) {
       recipeImage.src = recipe.strMealThumb;
@@ -29,8 +29,14 @@ async function getRandomRecipe(): Promise<void> {
       recipeTitle.textContent = recipe.strMeal;
     }
     
-    if (recipeInstructions) {
-      recipeInstructions.textContent = recipe.strInstructions;
+    if (recipeSteps) {
+      recipeSteps.innerHTML = '';
+      const instructions: string[] = recipe.strInstructions.split('. ').filter((step: string) => step.trim() !== '');
+      instructions.forEach((step: string) => {
+        const listItem: HTMLLIElement = document.createElement('li');
+        listItem.textContent = step;
+        recipeSteps.appendChild(listItem);
+      });
     }
   
     if (recipeContainer) {
